@@ -48,20 +48,24 @@ PDF uploads ──► Document Tool (pdf_tools: PyMuPDF text extraction)
         ┌───────────┴───────────┐
         ▼                       ▼
  Evaluation Agent (llm.py)   criteria + weights pulled LIVE from SQLite
-   • MockLLMClient           (prompts.py builds the model prompt from the DB,
-     (deterministic, no key)  so criteria can change without code edits)
-   • OpenAICompatibleClient
-     (OpenRouter / OpenAI / any JSON-capable model)
-        │
-        ▼
- Validation Tool (validation.py)
+   • OpenAICompatibleClient  (prompts.py builds the model prompt from the DB,
+     OpenAI SDK → OpenRouter  so criteria can change without code edits)
+     (default model
+      openai/gpt-4o-mini,
+      temperature 0, JSON mode)
+   • MockLLMClient
+     (deterministic, no key; used for tests/demo)
+        │   the LLM's ONLY job: per-criterion score + justification + evidence
+        ▼   (+ risks and summary) for ONE supplier at a time
+ Validation Tool (validation.py) — plain Python, no LLM
    • missing criteria → imputed as 0
    • invalid numbers → coerced or 0
    • out-of-range → clipped to [0, max_score]
+   • max_score / weights always taken from SQLite, never from the LLM
    • unknown/duplicate criterion ids handled, warnings recorded
         │
         ▼
- Deterministic computation (NO LLM involved):
+ Deterministic computation — plain Python, NO LLM involved:
    scoring.py  absolute weighted score, per-criterion benchmark (peer best),
                gap (score − benchmark), relative performance %
    ranking.py  PPI + mandatory tie-break order + sequential ranks 1..n
@@ -72,6 +76,8 @@ PDF uploads ──► Document Tool (pdf_tools: PyMuPDF text extraction)
         ▼
  JSON export (export.py) — complete run payload, downloadable from the UI
 ```
+
+**Where the LLM is and isn't used.** The model (OpenAI `gpt-4o-mini` reached through OpenRouter's OpenAI-compatible API) reads the proposal text and returns criterion scores with justification and quoted evidence. It never calculates weighted scores, benchmarks, PPI, tie-breaks or ranks; `validation.py`, `scoring.py` and `ranking.py` import no LLM code. The LLM's scores are the only non-deterministic input: with temperature 0 they are stable but not guaranteed identical between runs, so the same *validated* scorecards always give the same formulas and ordering, while a fresh LLM run may score slightly differently.
 
 ## SQLite schema
 
@@ -137,7 +143,7 @@ Generated PDFs live in `data/sample_pdfs/`. A sample evaluated run is in
 | [`Diffrent_dates_ratings.webm`](OUTPUT_INFO/Videos/Diffrent_dates_ratings.webm) | **Successful run with different submission dates and experience ratings** per supplier (24/28/29/30 Sep; ratings 2, 2.5, 3.5, 4). Ends on the leaderboard (`RFP_RUN_ID` `RFP-20260930-C5F34D`), scorecard and run details. |
 | [`Dublicate_File_validation_error.webm`](OUTPUT_INFO/Videos/Dublicate_File_validation_error.webm) | **Validation / error case.** Two suppliers given the same name: the app shows "Supplier names must be unique." and keeps *Evaluate suppliers* disabled. |
 
-In the different-dates run every supplier ends with a distinct PPI, so PPI alone decides the order and the date/rating tie-breaks are not triggered. Tie-break steps 2–4 are exercised by the unit tests (`tests/test_scoring.py`) and by the dates/ratings used in `scripts/demo.py`.
+In the different-dates run every supplier ends with a distinct PPI, so PPI alone decides the order and the date/rating tie-breaks are not triggered. Tie-break steps 2–4 (date, rating, name) are verified by the unit tests in `tests/test_scoring.py`, which feed the ranking tool suppliers with identical PPI.
 
 ### Sample exported JSON
 
