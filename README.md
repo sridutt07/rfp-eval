@@ -6,6 +6,9 @@ scorecards, then deterministically computes weighted scores, peer benchmarks,
 a Peer Performance Index (PPI), tie-breaks, and a final leaderboard — persisted
 in SQLite and downloadable as one complete JSON.
 
+**Live app:** https://rfp-eval-qsspy7fqn479mpep8cqsau.streamlit.app  
+**Source:** https://github.com/sridutt07/rfp-eval
+
 ## Quick start
 
 ```bash
@@ -29,9 +32,10 @@ streamlit run app.py
 ```
 
 No API key is needed: the built-in **mock evaluation agent** scores proposals
-deterministically. To use a real model, pick "OpenAI-compatible API" in the
-sidebar of the app and enter model / base URL / API key (works with OpenAI,
-OpenRouter, Ollama, vLLM, ...).
+deterministically. To use a real model, choose one of these in the app sidebar:
+
+- **OpenRouter (key from secrets)** — reads `OPENROUTER_API_KEY` (and optional `OPENROUTER_MODEL`, default `openai/gpt-4o-mini`) from `.streamlit/secrets.toml` locally, Streamlit Cloud *Secrets*, or the environment.
+- **OpenAI-compatible API** — enter model / base URL / API key manually (OpenAI, Ollama, vLLM, ...).
 
 ## Architecture & data flow
 
@@ -44,10 +48,10 @@ PDF uploads ──► Document Tool (pdf_tools: PyMuPDF text extraction)
         ┌───────────┴───────────┐
         ▼                       ▼
  Evaluation Agent (llm.py)   criteria + weights pulled LIVE from SQLite
-   • MockEvaluationAgent     (prompts.py builds the model prompt from the DB,
+   • MockLLMClient           (prompts.py builds the model prompt from the DB,
      (deterministic, no key)  so criteria can change without code edits)
-   • OpenAILLMClient
-     (any JSON-capable model)
+   • OpenAICompatibleClient
+     (OpenRouter / OpenAI / any JSON-capable model)
         │
         ▼
  Validation Tool (validation.py)
@@ -125,6 +129,30 @@ Generated PDFs live in `data/sample_pdfs/`. A sample evaluated run is in
 
 ## Demo
 
+### Recorded demonstrations (deployed app, live LLM via OpenRouter)
+
+| Video | What it shows |
+|---|---|
+| [`Success_verification.webm`](OUTPUT_INFO/Videos/Success_verification.webm) | **Successful run.** Four PDFs uploaded, agent set to *OpenRouter (key from secrets)*, each supplier evaluated by the LLM, then leaderboard, scorecard and run details. All suppliers use the same date and rating here. |
+| [`Diffrent_dates_ratings.webm`](OUTPUT_INFO/Videos/Diffrent_dates_ratings.webm) | **Successful run with different submission dates and experience ratings** per supplier (24/28/29/30 Sep; ratings 2, 2.5, 3.5, 4). Ends on the leaderboard (`RFP_RUN_ID` `RFP-20260930-C5F34D`), scorecard and run details. |
+| [`Dublicate_File_validation_error.webm`](OUTPUT_INFO/Videos/Dublicate_File_validation_error.webm) | **Validation / error case.** Two suppliers given the same name: the app shows "Supplier names must be unique." and keeps *Evaluate suppliers* disabled. |
+
+In the different-dates run every supplier ends with a distinct PPI, so PPI alone decides the order and the date/rating tie-breaks are not triggered. Tie-break steps 2–4 are exercised by the unit tests (`tests/test_scoring.py`) and by the dates/ratings used in `scripts/demo.py`.
+
+### Sample exported JSON
+
+| File | Run |
+|---|---|
+| [`OUTPUT_INFO/Diffrent_Dates_ranking.json`](OUTPUT_INFO/Diffrent_Dates_ranking.json) | Live-LLM run `RFP-20260930-C5F34D` with different dates/ratings; matches `Diffrent_dates_ratings.webm` and the screenshots below. |
+| [`OUTPUT_INFO/Inital_run.json`](OUTPUT_INFO/Inital_run.json) | First live-LLM run (`RFP-20260930-DE6C8A`), same date and rating for all suppliers. |
+| [`sample_output/sample_run.json`](sample_output/sample_run.json) | Deterministic mock-agent run produced by `scripts/demo.py`. |
+
+Each file is the complete run: criteria, tie-break order, warnings, and per supplier the absolute score, PPI, rank, and per-criterion score / benchmark / gap / relative % / weight / justification / evidence.
+
+LLM scoring is not deterministic, so scores can differ between live runs; the formulas, tie-breaks and ordering applied to validated scorecards are deterministic.
+
+### Scripted demo
+
 `python scripts/demo.py` runs:
 
 1. **Successful end-to-end run** — 4 suppliers → validated scorecards → benchmarks, PPI, ranked leaderboard → one `RFP_RUN_ID` persisted in SQLite → JSON export.
@@ -144,8 +172,23 @@ Generated PDFs live in `data/sample_pdfs/`. A sample evaluated run is in
 
 ## Screenshots
 
-Add PNGs to `docs/` (leaderboard, scorecard, run details, validation error) and link them here:
-`![Leaderboard](docs/leaderboard.png)`
+Captured from the deployed app during the live OpenRouter run `RFP-20260930-C5F34D` (different dates and ratings).
+
+**Leaderboard** — rank, supplier, absolute score, PPI, submission date, experience rating
+
+![Leaderboard](docs/leaderboard.png)
+
+**Detailed scorecard** — per-criterion score, benchmark, gap, relative %, evidence and justification
+
+![Detailed scorecard](docs/scorecard.png)
+
+**Run details** — `RFP_RUN_ID`, status, tie-break explanation, warnings, JSON download
+
+![Run details](docs/run-details.png)
+
+**Validation case** — duplicate supplier name blocks evaluation
+
+![Duplicate name validation error](docs/validation-error-duplicate-name.png)
 
 ## Assumptions
 
@@ -162,5 +205,7 @@ rfp_eval/               agent/tool modules (document, evaluation, validation, sc
 scripts/                init_db.py · make_sample_pdfs.py · demo.py
 tests/                  pytest suite (scoring, tie-breaks, validation, DB, determinism)
 data/                   rfp_eval.db (generated) · sample_pdfs/ (generated)
-sample_output/          sample_run.json (generated demo output)
+sample_output/          sample_run.json (mock-agent demo output)
+OUTPUT_INFO/            live-LLM run JSON + demo videos
+docs/                   README screenshots
 ```

@@ -1,0 +1,375 @@
+{
+  "rfp_run_id": "RFP-20260930-C5F34D",
+  "created_at": "2026-09-30T02:32:23+00:00",
+  "status": "completed",
+  "criteria": [
+    {
+      "criterion_id": 1,
+      "name": "Technical Capability",
+      "weight": 30.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 2,
+      "name": "Implementation Plan",
+      "weight": 20.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 3,
+      "name": "Commercial Value",
+      "weight": 20.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 4,
+      "name": "Security & Compliance",
+      "weight": 20.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 5,
+      "name": "Support & Experience",
+      "weight": 10.0,
+      "max_score": 10.0
+    }
+  ],
+  "tie_break_order": "(1) Higher Peer Performance Index (PPI) first > (2) Earlier submission date > (3) Higher historical experience rating > (4) Supplier name in ascending order",
+  "warnings": [],
+  "suppliers": [
+    {
+      "final_rank": 1,
+      "supplier_name": "NexaWorks",
+      "submission_date": "2026-09-24",
+      "experience_rating": 2.0,
+      "absolute_score": 90.0,
+      "ppi": 97.78,
+      "criteria": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "score": 9.0,
+          "max_score": 10.0,
+          "justification": "NexaWorks demonstrates strong technical capability with a modular microservices architecture and an API-first integration layer. The proposal mentions scalability to 1,500 vehicles and real-time data processing capabilities.",
+          "evidence": "NexaTransit Suite uses a modular microservices architecture deployed on a managed container platform. The design is scalable to 1,500 vehicles and every capability is exposed through a versioned open API.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 30.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "score": 9.0,
+          "max_score": 10.0,
+          "justification": "The implementation plan is detailed with clear milestones, staffing, and a risk management strategy. It includes a living risk register and a management buffer to protect the go-live milestone.",
+          "evidence": "Our implementation plan is milestone-gated across five phases of the master project plan, each with entry/exit criteria, a RACI staffing chart, and a living risk register.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "score": 8.0,
+          "max_score": 10.0,
+          "justification": "The pricing is clear and transparent, with a complete breakdown of costs and assumptions. However, the proposal does not provide a detailed explanation of the total cost implications beyond the fixed price.",
+          "evidence": "We pride ourselves on transparent pricing: the cost breakdown below is complete, and every assumption that could move the number is listed.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.0,
+          "gap": -1.0,
+          "relative_pct": 88.89
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "score": 10.0,
+          "max_score": 10.0,
+          "justification": "NexaWorks provides comprehensive security and compliance measures, including ISO 27001 certification and detailed encryption practices. The proposal outlines robust privacy controls and auditability.",
+          "evidence": "NexaWorks is ISO 27001 certified with annual surveillance audits. Data is encrypted with AES-256 at rest and TLS 1.3 in transit; access control is role-based with MFA enforced for all administrative users.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "score": 9.0,
+          "max_score": 10.0,
+          "justification": "The support model is well-defined, with 24/7 helpdesk support and a strong track record in similar projects. The proposal includes references and a detailed description of the support structure.",
+          "evidence": "Our support model is the strongest in this competition: 24/7 staffed helpdesk, 99.9% uptime SLA with service credits, a named account manager, quarterly business reviews.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 10.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        }
+      ],
+      "risks": [],
+      "overall_summary": "NexaWorks presents a strong proposal with high scores across all evaluation criteria. Their technical capabilities, implementation plan, and security measures are particularly noteworthy, while the commercial value could benefit from more detailed cost implications. Overall, they appear to be a reliable partner for the project."
+    },
+    {
+      "final_rank": 2,
+      "supplier_name": "Apex Systems",
+      "submission_date": "2026-09-28",
+      "experience_rating": 2.5,
+      "absolute_score": 89.0,
+      "ppi": 96.67,
+      "criteria": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "score": 9.0,
+          "max_score": 10.0,
+          "justification": "The proposal demonstrates strong technical capability with a cloud-native microservices architecture, scalability, and integration strengths. It explicitly mentions compliance with open standards and provides details on real-time data processing.",
+          "evidence": "Microservices architecture on Kubernetes; independently deployable, independently scalable services. Integration is a core strength. We expose a versioned REST API plus webhooks, and our integration layer ships with pre-built connectors for major CAD/AVL suites.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 30.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "score": 8.0,
+          "max_score": 10.0,
+          "justification": "The implementation plan is well-structured with a clear timeline and milestones, but lacks detailed risk management strategies beyond the identification of a few risks.",
+          "evidence": "Our 9-month timeline is organized into four phases with clear milestones, a full-time senior staffing plan, and a managed pilot before fleet-wide go-live.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.0,
+          "gap": -1.0,
+          "relative_pct": 88.89
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "score": 9.0,
+          "max_score": 10.0,
+          "justification": "The pricing is clear and transparent, with a detailed breakdown provided. The proposal acknowledges the premium pricing due to high-quality offerings.",
+          "evidence": "We propose a fixed price of $485,000. Our cost breakdown is fully transparent, and our assumptions are documented below so the Authority can evaluate total cost with confidence.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "score": 10.0,
+          "max_score": 10.0,
+          "justification": "The proposal provides comprehensive details on security and compliance, including certifications and data protection measures, demonstrating a strong commitment to security.",
+          "evidence": "Apex Systems is ISO 27001 certified and completes a SOC 2 Type II audit annually; reports are available under NDA. All data is protected with AES-256 encryption at rest and TLS 1.3 in transit.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "score": 8.0,
+          "max_score": 10.0,
+          "justification": "The support model is well-defined, and relevant experience is provided, but the proposal does not include specific references or detailed case studies.",
+          "evidence": "Apex provides a dedicated account manager, an 8x5 helpdesk with 4-hour response SLA, and 24/7 on-call coverage for severity-1 incidents.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 10.0,
+          "benchmark": 9.0,
+          "gap": -1.0,
+          "relative_pct": 88.89
+        }
+      ],
+      "risks": [],
+      "overall_summary": "Apex Systems presents a strong proposal with robust technical capabilities, a clear implementation plan, and a solid security framework. While there are minor gaps in risk management details and reference provision, the overall offering is compelling and well-aligned with the RFP requirements."
+    },
+    {
+      "final_rank": 3,
+      "supplier_name": "Orbit Digital",
+      "submission_date": "2026-09-30",
+      "experience_rating": 4.0,
+      "absolute_score": 75.0,
+      "ppi": 81.33,
+      "criteria": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "score": 6.0,
+          "max_score": 10.0,
+          "justification": "The proposal mentions a mature platform and an open API, but lacks detailed information on scalability and specific integration plans for MTA's legacy systems.",
+          "evidence": "JourneyView is a mature, field-hardened platform processing real-time feeds for over 3,000 vehicles daily... The specific approach for MTA\u2019s legacy CAD/AVL interfaces remains vague pending discovery workshops.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 30.0,
+          "benchmark": 9.0,
+          "gap": -3.0,
+          "relative_pct": 66.67
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "score": 8.0,
+          "max_score": 10.0,
+          "justification": "The implementation plan is well-structured with clear phases and milestones, but does not specify the exact timeline for each phase beyond the overall 8-month duration.",
+          "evidence": "Our 8-month program follows a proven four-stage rollout used in nine prior deployments, with milestones at each stage gate.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.0,
+          "gap": -1.0,
+          "relative_pct": 88.89
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "score": 7.0,
+          "max_score": 10.0,
+          "justification": "The pricing is clear and detailed, but the proposal states that the price is higher than some competitors without justifying the value of the higher cost.",
+          "evidence": "Fixed price: $442,000. While this is a higher price than some competitors, it includes our most senior delivery team and an extended 60-day hypercare period.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.0,
+          "gap": -2.0,
+          "relative_pct": 77.78
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "score": 9.0,
+          "max_score": 10.0,
+          "justification": "The proposal demonstrates strong security measures and compliance with SOC 2 Type II certification, but does not mention any additional certifications or specific privacy regulations.",
+          "evidence": "Orbit Digital holds SOC 2 Type II certification, renewed annually... Access control is role-based with MFA for privileged accounts.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": -1.0,
+          "relative_pct": 90.0
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "score": 9.0,
+          "max_score": 10.0,
+          "justification": "The support model is robust with 24/7 operations and high satisfaction ratings, and the proposal includes multiple references, showcasing relevant experience.",
+          "evidence": "Support is a signature strength: 24/7 staffed operations center, 99.95% uptime SLA, named account manager, and quarterly optimization reviews.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 10.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        }
+      ],
+      "risks": [
+        "Vague integration plan for MTA's legacy systems could lead to challenges during implementation.",
+        "Higher pricing compared to competitors may deter the client without clear justification of added value."
+      ],
+      "overall_summary": "Orbit Digital's proposal demonstrates solid technical capabilities and a well-structured implementation plan, but lacks some detail in integration and scalability. The pricing is clear but positioned as higher than competitors without sufficient justification. Strong security measures and a robust support model enhance the overall value of the proposal."
+    },
+    {
+      "final_rank": 4,
+      "supplier_name": "BrightPath Tech",
+      "submission_date": "2026-09-29",
+      "experience_rating": 3.5,
+      "absolute_score": 73.0,
+      "ppi": 80.22,
+      "criteria": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "score": 8.0,
+          "max_score": 10.0,
+          "justification": "The proposal outlines a serverless architecture that scales automatically and includes an API-first design for integration, which indicates strong technical capability. However, it lacks detailed information on specific integrations and scalability metrics.",
+          "evidence": "BrightPath Live is a serverless platform... The architecture is sized automatically to demand, and every service exposes a documented API for integration.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 30.0,
+          "benchmark": 9.0,
+          "gap": -1.0,
+          "relative_pct": 88.89
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "score": 9.0,
+          "max_score": 10.0,
+          "justification": "The implementation plan is well-structured with a clear timeline and defined milestones. The staffing plan includes experienced personnel, and the proposal addresses risk management effectively.",
+          "evidence": "Our aggressive 5-month timeline reflects a senior, co-located pod and a ruthless focus on milestones.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "score": 9.0,
+          "max_score": 10.0,
+          "justification": "The pricing is clear and detailed, with a fixed price model that includes a breakdown of costs and assumptions. This transparency enhances the commercial value of the proposal.",
+          "evidence": "Fixed price: $312,000. Our transparent pricing and detailed cost breakdown are below.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "score": 4.0,
+          "max_score": 10.0,
+          "justification": "While the proposal mentions standard security practices, it lacks specific certifications and detailed security controls. The pursuit of SOC 2 Type I certification in 2027 indicates a gap in current compliance.",
+          "evidence": "We are pursuing SOC 2 Type I in 2027 \u2014 and independent audit reports are not specified at this time.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": -6.0,
+          "relative_pct": 40.0
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "score": 5.0,
+          "max_score": 10.0,
+          "justification": "The support model is basic and relies on email and chat with next-business-day response targets. The limited experience and few references in large-agency operations are concerning.",
+          "evidence": "Support is provided via email and chat during business hours... we have limited experience relative to incumbents.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 10.0,
+          "benchmark": 9.0,
+          "gap": -4.0,
+          "relative_pct": 55.56
+        }
+      ],
+      "risks": [
+        "Lack of detailed security certifications and controls may pose compliance risks.",
+        "Limited experience in large-agency rail/bus operations could affect project execution."
+      ],
+      "overall_summary": "BrightPath Tech presents a strong proposal with a solid technical foundation and clear implementation plan. However, concerns regarding security compliance and limited experience in large-scale operations may impact their ability to meet all project requirements effectively."
+    }
+  ]
+}
