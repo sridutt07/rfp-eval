@@ -1,0 +1,385 @@
+{
+  "rfp_run_id": "RFP-20260930-AFC68D",
+  "created_at": "2026-09-30T01:39:36+00:00",
+  "status": "completed",
+  "criteria": [
+    {
+      "criterion_id": 1,
+      "name": "Technical Capability",
+      "weight": 30.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 2,
+      "name": "Implementation Plan",
+      "weight": 20.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 3,
+      "name": "Commercial Value",
+      "weight": 20.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 4,
+      "name": "Security & Compliance",
+      "weight": 20.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 5,
+      "name": "Support & Experience",
+      "weight": 10.0,
+      "max_score": 10.0
+    }
+  ],
+  "tie_break_order": "(1) Higher Peer Performance Index (PPI) first > (2) Earlier submission date > (3) Higher historical experience rating > (4) Supplier name in ascending order",
+  "warnings": [],
+  "suppliers": [
+    {
+      "final_rank": 1,
+      "supplier_name": "NexaWorks",
+      "submission_date": "2026-09-12",
+      "experience_rating": 4.0,
+      "absolute_score": 83.8,
+      "ppi": 93.45,
+      "criteria": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "score": 8.6,
+          "max_score": 10.0,
+          "justification": "Found 16 supporting passage(s) mentioning api, architecture, integration, microservices, platform. Score 8.6/10 reflects the balance of demonstrated strength versus gaps on 'Technical Capability'.",
+          "evidence": "Proposal in response to RFP-2026-041 \u2014 Cloud-based Real-Time Passenger Information & Fleet Operations Platform Metro Transit Authority (MTA) Submission date: September 12, 2026 1. ... Our NexaTransit Suite is a proven, API-first platform already operating at four mid-size agencies.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 30.0,
+          "benchmark": 9.2,
+          "gap": -0.6,
+          "relative_pct": 93.48
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "score": 9.2,
+          "max_score": 10.0,
+          "justification": "Found 12 supporting passage(s) mentioning cutover, deliverable, go-live, milestone, phase. Score 9.2/10 reflects the balance of demonstrated strength versus gaps on 'Implementation Plan'.",
+          "evidence": "With 10 years of transit systems experience across 25 projects, our differentiator is execution discipline: the most detailed implementation plan in this competition and a white-glove support model that stays with the Au ... We pair it with a 24/7 support organization, a named delivery team, and a milestone-gated plan that gives MTA full visibility and control from kickoff through hypercare.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "score": 6.6,
+          "max_score": 10.0,
+          "justification": "Found 5 supporting passage(s) mentioning cost breakdown, fixed price, payment terms, transparent pricing. Score 6.6/10 reflects the balance of demonstrated strength versus gaps on 'Commercial Value'.",
+          "evidence": "Executive Summary NexaWorks proposes a dependable, low-risk delivery of RFP-2026-041 for a fixed price of $398,000 over a 7-month program. ... Price Proposal Fixed price: $398,000.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 7.9,
+          "gap": -1.3,
+          "relative_pct": 83.54
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "score": 8.6,
+          "max_score": 10.0,
+          "justification": "Found 7 supporting passage(s) mentioning access control, audit, certification, compliance, gdpr. Score 8.6/10 reflects the balance of demonstrated strength versus gaps on 'Security & Compliance'.",
+          "evidence": "Pilot 5 weeks 75-bus pilot; dispatcher certification; milestone: pilot acceptance 5. ... Security, Compliance & Risk NexaWorks is ISO 27001 certified with annual surveillance audits.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.2,
+          "gap": -0.6,
+          "relative_pct": 93.48
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "score": 9.2,
+          "max_score": 10.0,
+          "justification": "Found 8 supporting passage(s) mentioning 24/7, account manager, experience, helpdesk, reference. Score 9.2/10 reflects the balance of demonstrated strength versus gaps on 'Support & Experience'.",
+          "evidence": "With 10 years of transit systems experience across 25 projects, our differentiator is execution discipline: the most detailed implementation plan in this competition and a white-glove support model that stays with the Au ... We pair it with a 24/7 support organization, a named delivery team, and a milestone-gated plan that gives MTA full visibility and control from kickoff through hypercare.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 10.0,
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        }
+      ],
+      "risks": [],
+      "overall_summary": "Mock evaluation of NexaWorks: average normalized criterion performance 84%. 0 risk/gap note(s) recorded. Scores are keyword-evidence based and fully deterministic."
+    },
+    {
+      "final_rank": 2,
+      "supplier_name": "Apex Systems",
+      "submission_date": "2026-09-10",
+      "experience_rating": 4.0,
+      "absolute_score": 82.8,
+      "ppi": 91.86,
+      "criteria": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "score": 9.2,
+          "max_score": 10.0,
+          "justification": "Found 22 supporting passage(s) mentioning api, architecture, cloud-native, event-driven, integration. Score 9.2/10 reflects the balance of demonstrated strength versus gaps on 'Technical Capability'.",
+          "evidence": "Proposal in response to RFP-2026-041 \u2014 Cloud-based Real-Time Passenger Information & Fleet Operations Platform Metro Transit Authority (MTA) Submission date: September 10, 2026 1. ... With 12 years of experience delivering mission-critical transit technology across 40+ public-sector projects, we propose Apex TransitCloud, our proven real-time passenger information platform, tailored to the Metro Trans",
+          "imputed": false,
+          "clipped": false,
+          "weight": 30.0,
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "score": 8.6,
+          "max_score": 10.0,
+          "justification": "Found 9 supporting passage(s) mentioning deliverable, go-live, milestone, phase, pilot. Score 8.6/10 reflects the balance of demonstrated strength versus gaps on 'Implementation Plan'.",
+          "evidence": "We offer a fixed price of $485,000 for full delivery and year-one support, with a 9-month implementation timeline from kickoff to final go-live. ... Key requirements include GTFS-RT open standards compliance, integration with the existing CAD/AVL and fare collection systems, 99.9% platform uptime, WCAG 2.1 AA accessibility, and full go-live within 12 months.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.2,
+          "gap": -0.6,
+          "relative_pct": 93.48
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "score": 5.2,
+          "max_score": 10.0,
+          "justification": "Found 5 supporting passage(s) mentioning assumptions, cost breakdown, fixed price, payment terms, total cost; 1 concern(s) noted (higher price, premium pricing). Score 5.2/10 reflects the balance of demonstrated strength versus gaps on 'Commercial Value'.",
+          "evidence": "We offer a fixed price of $485,000 for full delivery and year-one support, with a 9-month implementation timeline from kickoff to final go-live. ... Price Proposal We propose a fixed price of $485,000.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 7.9,
+          "gap": -2.7,
+          "relative_pct": 65.82
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "score": 9.2,
+          "max_score": 10.0,
+          "justification": "Found 8 supporting passage(s) mentioning access control, audit, compliance, data privacy, encryption. Score 9.2/10 reflects the balance of demonstrated strength versus gaps on 'Security & Compliance'.",
+          "evidence": "Key requirements include GTFS-RT open standards compliance, integration with the existing CAD/AVL and fare collection systems, 99.9% platform uptime, WCAG 2.1 AA accessibility, and full go-live within 12 months. ... Security, Compliance & Risk Security is independently certified, not merely asserted.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "score": 9.2,
+          "max_score": 10.0,
+          "justification": "Found 9 supporting passage(s) mentioning 24/7, account manager, experience, helpdesk, reference. Score 9.2/10 reflects the balance of demonstrated strength versus gaps on 'Support & Experience'.",
+          "evidence": "With 12 years of experience delivering mission-critical transit technology across 40+ public-sector projects, we propose Apex TransitCloud, our proven real-time passenger information platform, tailored to the Metro Trans ... We offer a fixed price of $485,000 for full delivery and year-one support, with a 9-month implementation timeline from kickoff to final go-live.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 10.0,
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        }
+      ],
+      "risks": [
+        "Commercial Value: 'premium pricing' - We acknowledge this is premium pricing relative to the market; it reflects our higher price point for certified security controls, redundant"
+      ],
+      "overall_summary": "Mock evaluation of Apex Systems: average normalized criterion performance 83%. 1 risk/gap note(s) recorded. Scores are keyword-evidence based and fully deterministic."
+    },
+    {
+      "final_rank": 3,
+      "supplier_name": "BrightPath Tech",
+      "submission_date": "2026-09-11",
+      "experience_rating": 2.0,
+      "absolute_score": 60.9,
+      "ppi": 69.02,
+      "criteria": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "score": 5.9,
+          "max_score": 10.0,
+          "justification": "Found 14 supporting passage(s) mentioning api, architecture, cloud-native, integration, platform; 2 concern(s) noted (limited detail, not specified). Score 5.9/10 reflects the balance of demonstrated strength versus gaps on 'Technical Capability'.",
+          "evidence": "Proposal in response to RFP-2026-041 \u2014 Cloud-based Real-Time Passenger Information & Fleet Operations Platform Metro Transit Authority (MTA) Submission date: September 11, 2026 1. ... Executive Summary BrightPath Tech is a fast-moving transit technology startup proposing BrightPath Live, a modern serverless passenger information platform for RFP-2026-041.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 30.0,
+          "benchmark": 9.2,
+          "gap": -3.3,
+          "relative_pct": 64.13
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "score": 8.2,
+          "max_score": 10.0,
+          "justification": "Found 11 supporting passage(s) mentioning deliverable, go-live, milestone, phase, pilot; 1 concern(s) noted (not specified). Score 8.2/10 reflects the balance of demonstrated strength versus gaps on 'Implementation Plan'.",
+          "evidence": "We combine the lowest price in this competition with the fastest timeline: a fixed price of $312,000 and full go-live in 5 months. ... Understanding of Requirements MTA needs real-time bus tracking for 500 vehicles, a rider mobile app, 120 digital signs, a dispatcher dashboard, integration with CAD/AVL and fare systems, 99.9% uptime, accessibility compl",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.2,
+          "gap": -1.0,
+          "relative_pct": 89.13
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "score": 7.9,
+          "max_score": 10.0,
+          "justification": "Found 6 supporting passage(s) mentioning assumptions, cost breakdown, fixed price, not-to-exceed, payment terms. Score 7.9/10 reflects the balance of demonstrated strength versus gaps on 'Commercial Value'.",
+          "evidence": "We combine the lowest price in this competition with the fastest timeline: a fixed price of $312,000 and full go-live in 5 months. ... Price Proposal Fixed price: $312,000.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 7.9,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "score": 4.0,
+          "max_score": 10.0,
+          "justification": "Found 4 supporting passage(s) mentioning access control, audit, certification, compliance, encryption; 2 concern(s) noted (limited detail, not specified). Score 4.0/10 reflects the balance of demonstrated strength versus gaps on 'Security & Compliance'.",
+          "evidence": "Understanding of Requirements MTA needs real-time bus tracking for 500 vehicles, a rider mobile app, 120 digital signs, a dispatcher dashboard, integration with CAD/AVL and fare systems, 99.9% uptime, accessibility compl ... Security, Compliance & Risk BrightPath Tech \u2014 Response to RFP-2026-041 Page 3 CONFIDENTIAL \u2014 RFP Response BrightPath follows standard security practices: encryption of data in transit and at rest, role-based access contr",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.2,
+          "gap": -5.2,
+          "relative_pct": 43.48
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "score": 3.0,
+          "max_score": 10.0,
+          "justification": "Found 4 supporting passage(s) mentioning experience, reference, support; 2 concern(s) noted (few references, limited experience, not specified). Score 3.0/10 reflects the balance of demonstrated strength versus gaps on 'Support & Experience'.",
+          "evidence": "hosting) $120,000 Implementation services $140,000 Signage software integration (120 signs) $28,000 Training & documentation $12,000 Year-1 support $12,000 Total fixed price $312,000 \u007f Assumption: MTA provides CAD/AVL AP ... Support Model, Experience & References Support is provided via email and chat during business hours with next-business-day response targets; critical incidents page our on-call engineer.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 10.0,
+          "benchmark": 9.2,
+          "gap": -6.2,
+          "relative_pct": 32.61
+        }
+      ],
+      "risks": [
+        "Technical Capability: 'not specified' - We are transparent about current limits: detailed certifications are not specified yet \u2014 we are pursuing SOC 2 Type I in 2027 \u2014 and independ",
+        "Technical Capability: 'limited detail' - Access control beyond standard role-based controls has limited detail in this proposal, and our data retention policy will be finalized join",
+        "Implementation Plan: 'not specified' - We are transparent about current limits: detailed certifications are not specified yet \u2014 we are pursuing SOC 2 Type I in 2027 \u2014 and independ",
+        "Security & Compliance: 'not specified' - We are transparent about current limits: detailed certifications are not specified yet \u2014 we are pursuing SOC 2 Type I in 2027 \u2014 and independ",
+        "Security & Compliance: 'limited detail' - Access control beyond standard role-based controls has limited detail in this proposal, and our data retention policy will be finalized join",
+        "Support & Experience: 'not specified' - We are transparent about current limits: detailed certifications are not specified yet \u2014 we are pursuing SOC 2 Type I in 2027 \u2014 and independ"
+      ],
+      "overall_summary": "Mock evaluation of BrightPath Tech: average normalized criterion performance 58%. 7 risk/gap note(s) recorded. Scores are keyword-evidence based and fully deterministic."
+    },
+    {
+      "final_rank": 4,
+      "supplier_name": "Orbit Digital",
+      "submission_date": "2026-09-09",
+      "experience_rating": 5.0,
+      "absolute_score": 53.4,
+      "ppi": 59.58,
+      "criteria": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "score": 3.6,
+          "max_score": 10.0,
+          "justification": "Found 12 supporting passage(s) mentioning api, integration, platform, real-time, scalability; 2 concern(s) noted (limited detail, unclear, vague). Score 3.6/10 reflects the balance of demonstrated strength versus gaps on 'Technical Capability'.",
+          "evidence": "Proposal in response to RFP-2026-041 \u2014 Cloud-based Real-Time Passenger Information & Fleet Operations Platform Metro Transit Authority (MTA) Submission date: September 13, 2026 1. ... We propose Orbit JourneyView, our mature passenger information platform, delivered for a fixed price of $442,000 on an 8-month timeline.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 30.0,
+          "benchmark": 9.2,
+          "gap": -5.6,
+          "relative_pct": 39.13
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "score": 7.2,
+          "max_score": 10.0,
+          "justification": "Found 9 supporting passage(s) mentioning cutover, deliverable, go-live, milestone, phase; 1 concern(s) noted (unclear, vague). Score 7.2/10 reflects the balance of demonstrated strength versus gaps on 'Implementation Plan'.",
+          "evidence": "We propose Orbit JourneyView, our mature passenger information platform, delivered for a fixed price of $442,000 on an 8-month timeline. ... Implementation Plan Our 8-month program follows a proven four-stage rollout used in nine prior deployments, with milestones at each stage gate and a dedicated transition manager.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.2,
+          "gap": -2.0,
+          "relative_pct": 78.26
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "score": 4.3,
+          "max_score": 10.0,
+          "justification": "Found 4 supporting passage(s) mentioning fixed price, payment terms; 1 concern(s) noted (higher price). Score 4.3/10 reflects the balance of demonstrated strength versus gaps on 'Commercial Value'.",
+          "evidence": "We propose Orbit JourneyView, our mature passenger information platform, delivered for a fixed price of $442,000 on an 8-month timeline. ... Price Proposal Fixed price: $442,000.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 7.9,
+          "gap": -3.6,
+          "relative_pct": 54.43
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "score": 5.2,
+          "max_score": 10.0,
+          "justification": "Found 2 supporting passage(s) mentioning access control, audit, certification, compliance, soc 2; 2 concern(s) noted (limited detail, unclear). Score 5.2/10 reflects the balance of demonstrated strength versus gaps on 'Security & Compliance'.",
+          "evidence": "Security, Compliance & Risk Orbit Digital \u2014 Response to RFP-2026-041 Page 3 CONFIDENTIAL \u2014 RFP Response Orbit Digital holds SOC 2 Type II certification, renewed annually. ... Access control is role-based with MFA for privileged accounts, and we retain immutable audit logs for two years to support auditability.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 20.0,
+          "benchmark": 9.2,
+          "gap": -4.0,
+          "relative_pct": 56.52
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "score": 9.2,
+          "max_score": 10.0,
+          "justification": "Found 12 supporting passage(s) mentioning 24/7, account manager, experience, reference, similar project. Score 9.2/10 reflects the balance of demonstrated strength versus gaps on 'Support & Experience'.",
+          "evidence": "Orbit Digital \u2014 Response to RFP-2026-041 Page 1 CONFIDENTIAL \u2014 RFP Response Orbit Digital Experience you can trust. ... Executive Summary Orbit Digital brings 15 years of experience and 60+ successful public-sector technology programs to RFP-2026-041.",
+          "imputed": false,
+          "clipped": false,
+          "weight": 10.0,
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0
+        }
+      ],
+      "risks": [
+        "Technical Capability: 'vague' - The specific approach for MTA\u2019s legacy CAD/AVL interfaces remains vague pending discovery workshops, and the data migration plan is unclear",
+        "Technical Capability: 'limited detail' - Scalability has limited detail beyond our current client footprint.",
+        "Implementation Plan: 'vague' - The specific approach for MTA\u2019s legacy CAD/AVL interfaces remains vague pending discovery workshops, and the data migration plan is unclear",
+        "Commercial Value: 'higher price' - While this is a higher price than some competitors, it includes our most senior delivery team and an extended 60-day hypercare period.",
+        "Security & Compliance: 'unclear' - The specific approach for MTA\u2019s legacy CAD/AVL interfaces remains vague pending discovery workshops, and the data migration plan is unclear",
+        "Security & Compliance: 'limited detail' - Scalability has limited detail beyond our current client footprint."
+      ],
+      "overall_summary": "Mock evaluation of Orbit Digital: average normalized criterion performance 59%. 6 risk/gap note(s) recorded. Scores are keyword-evidence based and fully deterministic."
+    }
+  ]
+}

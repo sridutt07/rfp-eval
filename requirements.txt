@@ -1,0 +1,10 @@
+# Core runtime
+streamlit>=1.32
+pymupdf>=1.23          # PDF text extraction (Document Tool)
+reportlab>=4.0         # Generates the synthetic supplier RFP PDFs
+
+# LLM layer (only needed when using a real model; the built-in mock needs nothing)
+openai>=1.30           # OpenAI-compatible client (works with OpenAI, OpenRouter, Ollama, vLLM, ...)
+
+# Dev / testing
+pytest>=8.0

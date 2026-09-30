@@ -1,0 +1,11 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.vscode/
+.env
+.streamlit/secrets.toml
+data/rfp_eval.db
+.DS_Store
